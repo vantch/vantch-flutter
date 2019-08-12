@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './model/post.dart';
 
 void main() => runApp(MyApp());
 
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget{
         ),
         body: Hello(),
       ),
-      
+
       theme: ThemeData(
         primarySwatch: Colors.yellow,
       ),
