@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import './demo/listview_demo.dart';
+import 'package:vantch/demo/drawer_demo.dart';
+// import './demo/listview_demo.dart';
 
 void main() => runApp(MyApp());
 
@@ -11,6 +12,8 @@ class MyApp extends StatelessWidget{
       home: Home(),
       theme: ThemeData(
         primarySwatch: Colors.yellow,
+        highlightColor: Color.fromRGBO(255, 255, 255, 0.2),
+        splashColor: Colors.white54,
       ),
     );
   }
@@ -19,16 +22,13 @@ class MyApp extends StatelessWidget{
 class Home extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return DefaultTabController(
+      length: 3,
+      child: Scaffold(
       backgroundColor:Colors.grey[100] ,
       appBar: AppBar(
           title: Text('Vantch'),
           elevation: 0.0,
-          leading: IconButton(
-            icon: Icon(Icons.menu),
-            tooltip: 'Navigation',
-            onPressed: () => debugPrint('Navigation button is pressed.'),
-          ),
           actions: <Widget>[
             IconButton(
               icon: Icon(Icons.search),
@@ -36,8 +36,27 @@ class Home extends StatelessWidget{
               onPressed: () => debugPrint('Search button is pressed'),
             ),
           ],
+          bottom: TabBar(
+            unselectedLabelColor: Colors.black38,
+            indicatorColor: Colors.black87,
+            indicatorWeight: 2.0,
+            indicatorSize: TabBarIndicatorSize.label,
+            tabs: <Widget>[
+              Tab(icon: Icon(Icons.local_florist)),
+              Tab(icon: Icon(Icons.local_bar)),
+              Tab(icon: Icon(Icons.local_library)),
+            ],
+          ),
         ),
-        body: null,
-      );
+        body: TabBarView(
+          children: <Widget>[
+            Icon(Icons.local_florist, size: 138.0, color: Colors.black12),
+            Icon(Icons.local_bar, size: 138.0, color: Colors.black12),
+            Icon(Icons.local_library, size: 138.0, color: Colors.black12),
+          ],
+        ),
+        drawer: DrawerDemo(),
+      ),
+    );
   }
 }
