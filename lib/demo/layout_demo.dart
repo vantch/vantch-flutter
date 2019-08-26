@@ -18,6 +18,7 @@ class SizeBox extends StatelessWidget {
             width: 200.0,
             height: 300.0,
             child: Container(
+              alignment: Alignment.topCenter,
               decoration: BoxDecoration(
                 color: Color.fromRGBO(3, 54, 255, 1.0),
                 borderRadius: BorderRadius.circular(16.0),
