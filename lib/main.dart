@@ -3,10 +3,11 @@ import 'package:vantch/demo/drawer_demo.dart';
 import './demo/bottom_navigation_bar_demo.dart';
 import './demo/listview_demo.dart';
 import './demo/basic_demo.dart';
+import './demo/layout_demo.dart';
 
 void main() => runApp(MyApp());
 
-class MyApp extends StatelessWidget{
+class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -21,14 +22,14 @@ class MyApp extends StatelessWidget{
   }
 }
 
-class Home extends StatelessWidget{
+class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
       length: 3,
       child: Scaffold(
-      backgroundColor:Colors.grey[100] ,
-      appBar: AppBar(
+        backgroundColor: Colors.grey[100],
+        appBar: AppBar(
           title: Text('Vantch'),
           elevation: 0.0,
           actions: <Widget>[
@@ -55,7 +56,8 @@ class Home extends StatelessWidget{
             ListViewDemo(),
             // Icon(Icons.local_bar, size: 138.0, color: Colors.black12),
             BasicDemo(),
-            Icon(Icons.local_library, size: 138.0, color: Colors.black12),
+            // Icon(Icons.local_library, size: 138.0, color: Colors.black12),
+            LayoutDemo(),
           ],
         ),
         drawer: DrawerDemo(),
