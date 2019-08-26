@@ -14,39 +14,115 @@ class SizeBox extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          SizedBox(
-            width: 200.0,
-            height: 300.0,
-            child: Container(
-              alignment: Alignment.topCenter,
-              decoration: BoxDecoration(
-                color: Color.fromRGBO(3, 54, 255, 1.0),
-                borderRadius: BorderRadius.circular(16.0),
+          Stack(
+            alignment: Alignment.topLeft,
+            children: <Widget>[
+              SizedBox(
+                width: 200.0,
+                height: 360.0,
+                child: Container(
+                  // alignment: Alignment(0.0, -0.8),
+                  decoration: BoxDecoration(
+                    color: Color.fromRGBO(3, 54, 255, 1.0),
+                    borderRadius: BorderRadius.circular(16.0),
+                  ),
+                ),
               ),
-              child: Icon(
-                Icons.ac_unit,
-                size: 64.0,
-                color: Colors.white,
+              SizedBox(
+                width: 100.0,
+                height: 100.0,
+                child: Container(
+                  decoration: BoxDecoration(
+                    color: Color.fromRGBO(3, 54, 255, 1.0),
+                    // borderRadius: BorderRadius.circular(16.0),
+                    shape: BoxShape.circle,
+                    gradient: RadialGradient(
+                      colors: [
+                        Color.fromRGBO(7, 102, 255, 1.0),
+                        Color.fromRGBO(3, 54, 255, 1.0),
+                      ],
+                    ),
+                  ),
+                  child: Icon(
+                    Icons.brightness_2,
+                    color: Colors.white,
+                    size: 32.0,
+                  ),
+                ),
               ),
-            ),
-          ),
-          SizedBox(
-            height: 32.0,
-          ),
-          SizedBox(
-            width: 160.0,
-            height: 60.0,
-            child: Container(
-              decoration: BoxDecoration(
-                color: Color.fromRGBO(3, 54, 255, 1.0),
-                borderRadius: BorderRadius.circular(16.0),
+              Positioned(
+                right: 20.0,
+                top: 20.0,
+                child: Icon(
+                  Icons.ac_unit,
+                  size: 20.0,
+                  color: Colors.white,
+                ),
               ),
-              child: Icon(
-                Icons.brightness_2,
-                color: Colors.white,
-                size: 32.0,
+              Positioned(
+                right: 20.0,
+                top: 120.0,
+                child: Icon(
+                  Icons.ac_unit,
+                  size: 20.0,
+                  color: Colors.white,
+                ),
               ),
-            ),
+              Positioned(
+                right: 40.0,
+                top: 100.0,
+                child: Icon(
+                  Icons.ac_unit,
+                  size: 16.0,
+                  color: Colors.white,
+                ),
+              ),
+              Positioned(
+                right: 80.0,
+                top: 200.0,
+                child: Icon(
+                  Icons.ac_unit,
+                  size: 20.0,
+                  color: Colors.white,
+                ),
+              ),
+              Positioned(
+                right: 40.0,
+                top: 260.0,
+                child: Icon(
+                  Icons.ac_unit,
+                  size: 18.0,
+                  color: Colors.white,
+                ),
+              ),
+              Positioned(
+                right: 60.0,
+                top: 344.0,
+                child: Icon(
+                  Icons.ac_unit,
+                  size: 18.0,
+                  color: Colors.white,
+                ),
+              ),
+              Positioned(
+                right: 50.0,
+                top: 290.0,
+                child: Icon(
+                  Icons.ac_unit,
+                  size: 18.0,
+                  color: Colors.white,
+                ),
+              ),
+              Positioned(
+                right: 20.0,
+                top: 346.0,
+                child: Icon(
+                  Icons.ac_unit,
+                  size: 18.0,
+                  color: Colors.white,
+                ),
+              ),
+            ],
           ),
         ],
       ),
