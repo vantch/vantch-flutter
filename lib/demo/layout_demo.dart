@@ -3,7 +3,29 @@ import 'package:flutter/material.dart';
 class LayoutDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return AspectRatioaaa();
+    return ConstrainedBoxDd();
+  }
+}
+
+class ConstrainedBoxDd extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          ConstrainedBox(
+            constraints: BoxConstraints(
+              minHeight: 200.0,
+              maxWidth: 200.0,
+            ),
+            child: Container(
+              color: Color.fromRGBO(123, 54, 255, 0.7),
+            ),
+          ),
+        ],
+      ),
+    );
   }
 }
 
