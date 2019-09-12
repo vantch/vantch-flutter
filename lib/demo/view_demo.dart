@@ -4,12 +4,16 @@ class ViewDemo extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return PageView(
+      // pageSnapping: false,
+      // reverse: true,
+      // scrollDirection: Axis.vertical,
+      onPageChanged: (currentPage) => debugPrint('Page: $currentPage'),
       children: <Widget>[
         Container(
           color: Colors.brown[900],
           alignment: Alignment(0.0, 0.0),
           child: Text(
-            'ONE',
+            'One',
             style: TextStyle(fontSize: 32.0, color: Colors.white),
           ),
         ),
@@ -17,7 +21,7 @@ class ViewDemo extends StatelessWidget{
           color: Colors.grey[900],
           alignment: Alignment(0.0, 0.0),
           child: Text(
-            'ONE',
+            'Two',
             style: TextStyle(fontSize: 32.0, color: Colors.white),
           ),
         ),
@@ -25,7 +29,7 @@ class ViewDemo extends StatelessWidget{
           color: Colors.blueGrey[900],
           alignment: Alignment(0.0, 0.0),
           child: Text(
-            'ONE',
+            'Three',
             style: TextStyle(fontSize: 32.0, color: Colors.white),
           ),
         ),
